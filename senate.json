@@ -1,6 +1,47 @@
-[
 {
-"senator": "Ed Markey",
+"key": "senate",
+"label": "Senate majority leader",
+"leader": "Schumer",
+"title": "Schumer support meter",
+"subtitle": "Senate Democratic caucus",
+"people": "current and incoming senators",
+"person_col": "Senator",
+"through": "Nov 9, 2026",
+"note": "",
+"groups": [
+{
+"label": "All current and incoming",
+"filter": "all"
+},
+{
+"label": "Expected to vote in the leadership election",
+"filter": "voting"
+},
+{
+"label": "On record only (non-zero scores)",
+"filter": "onrecord"
+},
+{
+"label": "Current senators",
+"filter": "current"
+},
+{
+"label": "Incoming senators",
+"filter": "incoming"
+}
+],
+"context": "Silence scores 0, so the many senators with no statement pull both averages toward the middle. The weighted figure sits closer to zero because nearly all firm opposition comes from incoming senators with the lowest weight. The caucus picks its leader by secret ballot, expected in early December.",
+"method": [
+"Scale: +5 repeated vocal advocacy; +4 explicit endorsement with a stated reason; +3 says they will support him; +2 defends his record or leadership; +1 mild positive signal; 0 no statement found; -1 declines to commit when asked; -2 calls for new leadership or a leadership debate without ruling him out; -3 withholds support and sets conditions; -4 says it is time for new leadership, backs someone else or says their vote is currently no; -5 flatly says they will not support him.",
+"Scores are one reader's judgment of public statements reported in the press. They are not vote predictions.",
+"Weight = 1 + 9 x (years in Congress, House plus Senate, as of January 2027) / 50. The longest-serving member gets 10 and a brand-new senator gets 1.",
+"Schumer himself is left out. Mary Peltola (Alaska) and Scott Colom (Mississippi) are left out while their races are uncalled.",
+"The four retiring senators and Governor-elect Klobuchar are current senators, so they are in the main figure, but they are not expected to vote in the leadership election. The group table shows the figure without them.",
+"A score of 0 means nothing was found on the record, not that the member is neutral. Many are allies who have simply not been quoted."
+],
+"rows": [
+{
+"name": "Ed Markey",
 "state": "MA",
 "status": "Returning",
 "years": 50,
@@ -9,7 +50,7 @@
 "basis": "Said in primary debate the Senate needs 'a big debate about new leadership'; stopped short of endorsing"
 },
 {
-"senator": "Ron Wyden",
+"name": "Ron Wyden",
 "state": "OR",
 "status": "Returning",
 "years": 46,
@@ -18,7 +59,7 @@
 "basis": "Oct: credited Schumer for the map, 'You can't argue with results'"
 },
 {
-"senator": "Dick Durbin",
+"name": "Dick Durbin",
 "state": "IL",
 "status": "Retiring",
 "years": 44,
@@ -27,7 +68,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Jack Reed",
+"name": "Jack Reed",
 "state": "RI",
 "status": "Returning",
 "years": 36,
@@ -36,7 +77,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Bernie Sanders",
+"name": "Bernie Sanders",
 "state": "VT",
 "status": "Returning",
 "years": 36,
@@ -45,7 +86,7 @@
 "basis": "Has not pledged support; Oct: 'too early to speculate'; earlier called a Schumer-led vote a 'failure of Democratic leadership'"
 },
 {
-"senator": "Patty Murray",
+"name": "Patty Murray",
 "state": "WA",
 "status": "Returning",
 "years": 34,
@@ -54,7 +95,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Sherrod Brown",
+"name": "Sherrod Brown",
 "state": "OH",
 "status": "Incoming (returning member)",
 "years": 32,
@@ -63,7 +104,7 @@
 "basis": "Nov 9: said he is supporting Schumer, declined to elaborate"
 },
 {
-"senator": "Maria Cantwell",
+"name": "Maria Cantwell",
 "state": "WA",
 "status": "Returning",
 "years": 28,
@@ -72,7 +113,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Tammy Baldwin",
+"name": "Tammy Baldwin",
 "state": "WI",
 "status": "Returning",
 "years": 28,
@@ -81,7 +122,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Adam Schiff",
+"name": "Adam Schiff",
 "state": "CA",
 "status": "Returning",
 "years": 26,
@@ -90,7 +131,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Chris Van Hollen",
+"name": "Chris Van Hollen",
 "state": "MD",
 "status": "Returning",
 "years": 24,
@@ -99,7 +140,7 @@
 "basis": "'No coronation', 'nobody should get a blank check'; urged colleagues to withhold commitments; 'in listening mode' on running himself"
 },
 {
-"senator": "Amy Klobuchar",
+"name": "Amy Klobuchar",
 "state": "MN",
 "status": "Departing (governor-elect)",
 "years": 20,
@@ -108,7 +149,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Sheldon Whitehouse",
+"name": "Sheldon Whitehouse",
 "state": "RI",
 "status": "Returning",
 "years": 20,
@@ -117,7 +158,7 @@
 "basis": "Election night: winning the Senate 'certainly justifies another term as leader'"
 },
 {
-"senator": "Kirsten Gillibrand",
+"name": "Kirsten Gillibrand",
 "state": "NY",
 "status": "Returning",
 "years": 20,
@@ -126,7 +167,7 @@
 "basis": "DSCC chair and close ally, but no on-record leadership statement found"
 },
 {
-"senator": "Chris Murphy",
+"name": "Chris Murphy",
 "state": "CT",
 "status": "Returning",
 "years": 20,
@@ -135,7 +176,7 @@
 "basis": "Dodged three times in March when asked if he would support Schumer; nothing found post-election"
 },
 {
-"senator": "Mazie Hirono",
+"name": "Mazie Hirono",
 "state": "HI",
 "status": "Returning",
 "years": 20,
@@ -144,7 +185,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Peter Welch",
+"name": "Peter Welch",
 "state": "VT",
 "status": "Returning",
 "years": 20,
@@ -153,7 +194,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Mark Warner",
+"name": "Mark Warner",
 "state": "VA",
 "status": "Returning",
 "years": 18,
@@ -162,7 +203,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Jeanne Shaheen",
+"name": "Jeanne Shaheen",
 "state": "NH",
 "status": "Retiring",
 "years": 18,
@@ -171,7 +212,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Jeff Merkley",
+"name": "Jeff Merkley",
 "state": "OR",
 "status": "Returning",
 "years": 18,
@@ -180,7 +221,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Michael Bennet",
+"name": "Michael Bennet",
 "state": "CO",
 "status": "Returning",
 "years": 18,
@@ -189,7 +230,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Martin Heinrich",
+"name": "Martin Heinrich",
 "state": "NM",
 "status": "Returning",
 "years": 18,
@@ -198,7 +239,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Gary Peters",
+"name": "Gary Peters",
 "state": "MI",
 "status": "Retiring",
 "years": 18,
@@ -207,7 +248,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Ben Ray Lujan",
+"name": "Ben Ray Lujan",
 "state": "NM",
 "status": "Returning",
 "years": 18,
@@ -216,7 +257,7 @@
 "basis": "Oct: dismissed talk of a challenge - 'hard to lose if no one else is challenging you'"
 },
 {
-"senator": "Chris Coons",
+"name": "Chris Coons",
 "state": "DE",
 "status": "Returning",
 "years": 16,
@@ -225,7 +266,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Richard Blumenthal",
+"name": "Richard Blumenthal",
 "state": "CT",
 "status": "Returning",
 "years": 16,
@@ -234,7 +275,7 @@
 "basis": "Declined to endorse: 'we need new energy and ideas', but expects Schumer to be re-elected"
 },
 {
-"senator": "Brian Schatz",
+"name": "Brian Schatz",
 "state": "HI",
 "status": "Returning",
 "years": 14,
@@ -243,7 +284,7 @@
 "basis": "Praised Schumer's record when accepting his whip endorsement; no explicit leader statement found"
 },
 {
-"senator": "Angus King",
+"name": "Angus King",
 "state": "ME",
 "status": "Returning",
 "years": 14,
@@ -252,7 +293,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Tim Kaine",
+"name": "Tim Kaine",
 "state": "VA",
 "status": "Returning",
 "years": 14,
@@ -261,7 +302,7 @@
 "basis": "Nov 2025: defended Schumer as 'an effective leader'; nothing found post-election"
 },
 {
-"senator": "Elizabeth Warren",
+"name": "Elizabeth Warren",
 "state": "MA",
 "status": "Returning",
 "years": 14,
@@ -270,7 +311,7 @@
 "basis": "Has not pledged support; Oct: 'We'll know a lot more after the midterms'"
 },
 {
-"senator": "Tammy Duckworth",
+"name": "Tammy Duckworth",
 "state": "IL",
 "status": "Returning",
 "years": 14,
@@ -279,7 +320,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Cory Booker",
+"name": "Cory Booker",
 "state": "NJ",
 "status": "Returning",
 "years": 13,
@@ -288,7 +329,7 @@
 "basis": "Reported as declining to commit when asked; no direct quote found"
 },
 {
-"senator": "Ruben Gallego",
+"name": "Ruben Gallego",
 "state": "AZ",
 "status": "Returning",
 "years": 12,
@@ -297,7 +338,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Maggie Hassan",
+"name": "Maggie Hassan",
 "state": "NH",
 "status": "Returning",
 "years": 10,
@@ -306,7 +347,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Catherine Cortez Masto",
+"name": "Catherine Cortez Masto",
 "state": "NV",
 "status": "Returning",
 "years": 10,
@@ -315,7 +356,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Jacky Rosen",
+"name": "Jacky Rosen",
 "state": "NV",
 "status": "Returning",
 "years": 10,
@@ -324,7 +365,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Lisa Blunt Rochester",
+"name": "Lisa Blunt Rochester",
 "state": "DE",
 "status": "Returning",
 "years": 10,
@@ -333,7 +374,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Tina Smith",
+"name": "Tina Smith",
 "state": "MN",
 "status": "Retiring",
 "years": 9,
@@ -342,7 +383,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Andy Kim",
+"name": "Andy Kim",
 "state": "NJ",
 "status": "Returning",
 "years": 8,
@@ -351,7 +392,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Elissa Slotkin",
+"name": "Elissa Slotkin",
 "state": "MI",
 "status": "Returning",
 "years": 8,
@@ -360,7 +401,7 @@
 "basis": "Declined to back him ('not until I see a plan'); wants 'significant new leadership'; won't rule out running"
 },
 {
-"senator": "Chris Pappas",
+"name": "Chris Pappas",
 "state": "NH",
 "status": "Incoming",
 "years": 8,
@@ -369,7 +410,7 @@
 "basis": "Voters want 'a new generation of leadership in the Senate'; has not affirmed support"
 },
 {
-"senator": "Mark Kelly",
+"name": "Mark Kelly",
 "state": "AZ",
 "status": "Returning",
 "years": 6,
@@ -378,7 +419,7 @@
 "basis": "Nov 7: 'my plan is to support him', while urging the caucus to do things differently"
 },
 {
-"senator": "John Hickenlooper",
+"name": "John Hickenlooper",
 "state": "CO",
 "status": "Returning",
 "years": 6,
@@ -387,7 +428,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Alex Padilla",
+"name": "Alex Padilla",
 "state": "CA",
 "status": "Returning",
 "years": 6,
@@ -396,7 +437,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Jon Ossoff",
+"name": "Jon Ossoff",
 "state": "GA",
 "status": "Returning",
 "years": 6,
@@ -405,7 +446,7 @@
 "basis": "Described secondhand as evasive; no on-record statement found"
 },
 {
-"senator": "Raphael Warnock",
+"name": "Raphael Warnock",
 "state": "GA",
 "status": "Returning",
 "years": 6,
@@ -414,7 +455,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "John Fetterman",
+"name": "John Fetterman",
 "state": "PA",
 "status": "Returning",
 "years": 4,
@@ -423,7 +464,7 @@
 "basis": "Nov 9: spokesperson confirmed he will support Schumer"
 },
 {
-"senator": "Angela Alsobrooks",
+"name": "Angela Alsobrooks",
 "state": "MD",
 "status": "Returning",
 "years": 2,
@@ -432,7 +473,7 @@
 "basis": "No on-record statement found"
 },
 {
-"senator": "Roy Cooper",
+"name": "Roy Cooper",
 "state": "NC",
 "status": "Incoming",
 "years": 0,
@@ -441,7 +482,7 @@
 "basis": "Has declined to commit when asked"
 },
 {
-"senator": "Josh Turek",
+"name": "Josh Turek",
 "state": "IA",
 "status": "Incoming",
 "years": 0,
@@ -450,7 +491,7 @@
 "basis": "Declined to affirm support when asked"
 },
 {
-"senator": "James Talarico",
+"name": "James Talarico",
 "state": "TX",
 "status": "Incoming",
 "years": 0,
@@ -459,7 +500,7 @@
 "basis": "Won't commit; says he'll meet every leadership candidate and 'ask tough questions'"
 },
 {
-"senator": "Annie Andrews",
+"name": "Annie Andrews",
 "state": "SC",
 "status": "Incoming",
 "years": 0,
@@ -468,7 +509,7 @@
 "basis": "On record that she won't support him; reaffirmed need for new leadership after the election"
 },
 {
-"senator": "Peggy Flanagan",
+"name": "Peggy Flanagan",
 "state": "MN",
 "status": "Incoming",
 "years": 0,
@@ -477,7 +518,7 @@
 "basis": "'It is time for new leadership' (repeated Nov 4); Nov 9 said not ready to make commitments"
 },
 {
-"senator": "Abdul El-Sayed",
+"name": "Abdul El-Sayed",
 "state": "MI",
 "status": "Incoming",
 "years": 0,
@@ -486,7 +527,7 @@
 "basis": "Backs Van Hollen for leader; later said he wants 'two or more options'"
 },
 {
-"senator": "Adam Hamilton",
+"name": "Adam Hamilton",
 "state": "KS",
 "status": "Incoming",
 "years": 0,
@@ -495,7 +536,7 @@
 "basis": "'I'm not supporting Schumer for leader'; repeated on Meet the Press and CNN Nov 8"
 },
 {
-"senator": "Troy Jackson",
+"name": "Troy Jackson",
 "state": "ME",
 "status": "Incoming",
 "years": 0,
@@ -504,7 +545,7 @@
 "basis": "Told Schumer directly he will 'support somebody else'"
 },
 {
-"senator": "Juliana Stratton",
+"name": "Juliana Stratton",
 "state": "IL",
 "status": "Incoming",
 "years": 0,
@@ -513,3 +554,4 @@
 "basis": "'I will not support Chuck Schumer'; spokesperson reaffirmed Nov 4"
 }
 ]
+}

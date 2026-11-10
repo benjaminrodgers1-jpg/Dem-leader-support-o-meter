@@ -1,194 +1,162 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Dem Leader Support-o-Meter</title>
-<meta name="description" content="Tracking Senate Democrats' public statements on Chuck Schumer as majority leader, scored -5 to +5.">
+<meta name="description" content="Tracking congressional Democrats' public statements on Hakeem Jeffries as House speaker and Chuck Schumer as Senate majority leader, scored -5 to +5.">
 <style>
-:root{--color-fg:#1c1b19;--color-fg-muted:#6b6862;--color-bg:#faf9f6;--color-panel:#fff;--color-border-line:#e3e0d8;--color-ok:#1f7a4d;--color-warn:#a8690a;--color-bad:#b3372c;
---font-anthropic-sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--font-anthropic-serif:Georgia,"Times New Roman",serif;
---cds-font-size-caption:.82rem;--cds-font-size-body:1rem;--cds-font-size-heading:1.1rem;--cds-font-size-title:1.9rem;--cds-font-weight-medium:600;
---cds-gap-xs:4px;--cds-gap-sm:8px;--cds-gap-md:12px;--cds-gap-lg:24px;--cds-pad-sm:8px;--cds-pad-lg:16px;--cds-radius:10px;
---cds-chart-muted:#b9b5ab;--cds-chart-axis:#a9a59b;--cds-text-secondary:#6b6862;--cds-surface-popover:#fff;--cds-border:#d9d5cc;--cds-shadow-popover:0 4px 16px rgba(0,0,0,.14)}
-@media (prefers-color-scheme:dark){:root{--color-fg:#eeece6;--color-fg-muted:#a5a199;--color-bg:#191816;--color-panel:#22211e;--color-border-line:#38362f;--color-ok:#5fc08d;--color-bad:#ef8377;
---cds-chart-muted:#5d5a52;--cds-chart-axis:#6f6b62;--cds-text-secondary:#a5a199;--cds-surface-popover:#2a2925;--cds-border:#45423a;--cds-shadow-popover:0 4px 16px rgba(0,0,0,.5)}}
-body{margin:0;background:var(--color-bg)}
-.dash-select{font:inherit;font-size:var(--cds-font-size-caption);padding:6px 8px;border:1px solid var(--color-border-line);border-radius:8px;background-color:var(--color-panel);color:var(--color-fg)}
+:root{--fg:#1c1b19;--muted:#6b6862;--bg:#faf9f6;--panel:#fff;--line:#e3e0d8;--ok:#1f7a4d;--bad:#b3372c;--c1:#2f6fb0;--c2:#c2571a;--zero:#b9b5ab;--axis:#a9a59b;--pop:#fff;--shadow:0 4px 16px rgba(0,0,0,.14)}
+@media (prefers-color-scheme:dark){:root{--fg:#eeece6;--muted:#a5a199;--bg:#191816;--panel:#22211e;--line:#38362f;--ok:#5fc08d;--bad:#ef8377;--c1:#6aa7e0;--c2:#e58a52;--zero:#5d5a52;--axis:#6f6b62;--pop:#2a2925;--shadow:0 4px 16px rgba(0,0,0,.5)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.sm{max-width:920px;margin:0 auto;padding:16px 16px 48px;display:flex;flex-direction:column;gap:24px}
+.seg{display:flex;gap:4px;padding:4px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.seg button{flex:1;font:inherit;font-weight:600;font-size:.95rem;padding:10px 8px;border:0;border-radius:9px;background:transparent;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--fg);color:var(--bg)}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:1.9rem;margin:0}
+h2{font-size:1.1rem;font-weight:600;margin:0 0 8px}
+p{margin:0;line-height:1.5}
+.muted{color:var(--muted);font-size:.82rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.big{font-family:Georgia,"Times New Roman",serif;font-size:2.4rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.chart{position:relative;min-height:120px}
+.hist{min-height:230px}
+.tip{position:absolute;top:0;max-width:260px;background:var(--pop);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:10px;padding:8px;font-size:.82rem;pointer-events:none;z-index:2}
+.tip b{display:block;margin-bottom:2px}
+svg text{font-family:inherit;font-size:11px;fill:var(--muted)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.82rem}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.neg{color:var(--bad);font-weight:600}td.pos{color:var(--ok);font-weight:600}
+td.basis{min-width:220px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+select{font:inherit;font-size:.82rem;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background-color:var(--panel);color:var(--fg)}
+details{font-size:.82rem;color:var(--muted)}details li{margin:4px 0}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-<script>
-const dash=(()=>{const store={},calcs={},draws={};const api={colors:['#2f6fb0','#c2571a'],
- _set(id,rows){store[id]=rows},
- calc(id,o){calcs[id]=o},
- data(id){if(store[id])return{status:'ok',data:store[id]};if(calcs[id]){const ins=calcs[id].inputs.map(i=>api.data(i));if(ins.every(x=>x.status==='ok'))return{status:'ok',data:calcs[id].fn(...ins.map(x=>x.data))};}return{status:'loading',data:[]}},
- draw(name,fn){if(fn)draws[name]=fn;const f=draws[name];if(f)document.querySelectorAll('[data-draw="'+name+'"]').forEach(el=>f(el))},
- _all(){Object.keys(draws).forEach(n=>api.draw(n))}};return api})();
-</script>
 </head><body>
-<style>
-.sm{max-width:920px;margin:0 auto;padding:20px 16px 48px;display:flex;flex-direction:column;gap:var(--cds-gap-lg);font-family:var(--font-anthropic-sans);color:var(--color-fg)}
-.sm h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
-.sm h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0 0 var(--cds-gap-sm)}
-.sm p{margin:0;font-size:var(--cds-font-size-body);line-height:1.5}
-.sm .muted{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
-.sm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--cds-gap-md)}
-.sm-card{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg)}
-.sm-big{font-family:var(--font-anthropic-serif);font-weight:400;font-size:2.4rem;line-height:1.1;font-variant-numeric:tabular-nums}
-.sm-chart{position:relative;min-height:120px}
-.sm-hist{min-height:230px}
-.sm-tip{position:absolute;max-width:260px;background:var(--cds-surface-popover);border:1px solid var(--cds-border);box-shadow:var(--cds-shadow-popover);border-radius:var(--cds-radius);padding:var(--cds-pad-sm);font-size:var(--cds-font-size-caption);pointer-events:none;z-index:2}
-.sm-tip b{display:block;margin-bottom:2px}
-.sm svg text{font-family:var(--font-anthropic-sans);font-size:11px;fill:var(--cds-text-secondary)}
-.sm-scroll{overflow-x:auto}
-.sm table{border-collapse:collapse;width:100%;font-size:var(--cds-font-size-caption)}
-.sm th,.sm td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--color-border-line);vertical-align:top}
-.sm td.num,.sm th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-.sm td.neg{color:var(--color-bad);font-weight:var(--cds-font-weight-medium)}
-.sm td.pos{color:var(--color-ok);font-weight:var(--cds-font-weight-medium)}
-.sm td.basis{min-width:220px}
-.sm-row{display:flex;gap:var(--cds-gap-sm);align-items:center;flex-wrap:wrap;margin-bottom:var(--cds-gap-sm)}
-.sm details{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
-.sm details li{margin:4px 0}
-</style>
 <div class="sm">
+  <div class="seg" role="group" aria-label="Choose leadership race">
+    <button type="button" data-ch="house" aria-pressed="false">House speaker</button>
+    <button type="button" data-ch="senate" aria-pressed="false">Senate majority leader</button>
+  </div>
   <div>
-    <h1 id="title">Schumer support meter</h1>
-    <p class="muted">Senate Democratic caucus, public statements through <span id="through">Nov 9, 2026</span>. <span id="note"></span></p>
+    <h1 id="title">Dem Leader Support-o-Meter</h1>
+    <p class="muted" id="subtitle"></p>
   </div>
-  <p id="takeaway">Across <b data-draw="fig" data-group="All current and incoming" data-f="n" data-source="summary" data-field="n" data-where="group=All current and incoming">—</b> current and incoming senators, Schumer scores <b data-draw="fig" data-group="All current and incoming" data-f="simple" data-source="summary" data-field="simple" data-where="group=All current and incoming">—</b> on a simple average and <b data-draw="fig" data-group="All current and incoming" data-f="weighted" data-source="summary" data-field="weighted" data-where="group=All current and incoming">—</b> weighted by seniority, on a scale from -5 (outright opposition) to +5 (vocal support). <b data-draw="fig" data-group="All current and incoming" data-f="pos" data-source="summary" data-field="pos" data-where="group=All current and incoming">—</b> are on record in support, <b data-draw="fig" data-group="All current and incoming" data-f="neg" data-source="summary" data-field="neg" data-where="group=All current and incoming">—</b> are critical, noncommittal or opposed, and <b data-draw="fig" data-group="All current and incoming" data-f="zero" data-source="summary" data-field="zero" data-where="group=All current and incoming">—</b> have said nothing found on the record.</p>
-  <div class="sm-cards" id="headline">
-    <div class="sm-card" id="card-simple"><div class="muted">Simple average</div><div class="sm-big" data-draw="fig" data-group="All current and incoming" data-f="simple" data-source="summary" data-field="simple" data-where="group=All current and incoming">—</div><div class="muted">Every senator counts once</div></div>
-    <div class="sm-card" id="card-weighted"><div class="muted">Seniority-weighted average</div><div class="sm-big" data-draw="fig" data-group="All current and incoming" data-f="weighted" data-source="summary" data-field="weighted" data-where="group=All current and incoming">—</div><div class="muted">Weight 1 to 10 by years in Congress</div></div>
+  <p id="lede">Loading…</p>
+  <div class="cards">
+    <div class="card"><div class="muted">Simple average</div><div class="big" id="simple">—</div><div class="muted">Every member counts once</div></div>
+    <div class="card"><div class="muted">Seniority-weighted average</div><div class="big" id="weighted">—</div><div class="muted">Weight 1 to 10 by years served</div></div>
   </div>
-  <section id="meter-section">
+  <section>
     <h2>Where he lands on the scale</h2>
-    <div class="sm-chart" data-draw="meter" data-source="summary"></div>
-    <p class="muted">Silence scores 0, so the many senators with no statement pull both averages toward the middle. The weighted figure sits closer to zero because nearly all firm opposition comes from incoming senators with the lowest weight.</p>
+    <div class="chart" id="meter"></div>
+    <p class="muted" id="context"></p>
   </section>
-  <section id="dist-section">
-    <h2>How many senators sit at each score</h2>
-    <div class="sm-chart sm-hist" data-draw="hist" data-source="dist"></div>
+  <section>
+    <h2>How many sit at each score</h2>
+    <div class="chart hist" id="hist"></div>
     <p class="muted">Tap or point at a bar to see who is there.</p>
   </section>
-  <section id="groups-section">
+  <section>
     <h2>Averages by group</h2>
-    <div class="sm-scroll">
-      <table id="groups" data-source="summary" data-row-key="group">
-        <thead><tr><th data-field="group">Group</th><th class="num" data-field="n">Senators</th><th class="num" data-field="simple">Simple</th><th class="num" data-field="weighted">Weighted</th></tr></thead>
-        <tbody data-draw="groups"></tbody>
-      </table>
-    </div>
+    <div class="scroll"><table><thead><tr><th>Group</th><th class="num">Members</th><th class="num">Simple</th><th class="num">Weighted</th></tr></thead><tbody id="groups"></tbody></table></div>
   </section>
-  <section id="senators-section">
-    <h2>Every senator</h2>
-    <div class="sm-row"><label class="muted" for="sm-sort">Sort by</label>
-      <select class="dash-select" id="sm-sort" aria-label="Sort senators">
-        <option value="weight">Seniority, highest first</option>
-        <option value="asc">Score, most opposed first</option>
-        <option value="desc">Score, most supportive first</option>
-        <option value="name">Name</option>
-      </select></div>
-    <div class="sm-scroll">
-      <table id="senators" data-source="senators" data-row-key="senator">
-        <thead><tr><th data-field="senator">Senator</th><th data-field="state">State</th><th data-field="status">Status</th><th class="num" data-field="years">Years</th><th class="num" data-field="weight">Weight</th><th class="num" data-field="score">Score</th><th data-field="basis">Basis for the score</th></tr></thead>
-        <tbody data-draw="rows"></tbody>
-      </table>
+  <section>
+    <h2>Member by member</h2>
+    <div class="row">
+      <label class="muted" for="show">Show</label>
+      <select id="show" aria-label="Which members to show"><option value="onrecord">On record only</option><option value="all">Everyone</option></select>
+      <label class="muted" for="sort">Sort by</label>
+      <select id="sort" aria-label="Sort members"><option value="asc">Score, most opposed first</option><option value="desc">Score, most supportive first</option><option value="weight">Seniority, highest first</option><option value="name">Name</option></select>
     </div>
+    <div class="scroll"><table><thead><tr><th id="person-col">Member</th><th>State</th><th>Status</th><th class="num">Years</th><th class="num">Weight</th><th class="num">Score</th><th>Basis for the score</th></tr></thead><tbody id="rows"></tbody></table></div>
+    <p class="muted" id="rowcount"></p>
   </section>
-  <details id="method">
-    <summary>How the scores and weights were set, and what to be careful about</summary>
-    <ul>
-      <li>Scale: +5 repeated vocal advocacy; +4 explicit endorsement with a stated reason; +3 says they will support him; +2 defends his record or leadership; +1 mild positive signal; 0 no statement found; -1 declines to commit when asked; -2 calls for new leadership or a leadership debate without ruling him out; -3 withholds support and urges conditions; -4 says it is time for new leadership or backs someone else; -5 flatly says they will not support him.</li>
-      <li>Scores are one reader's judgment of public statements reported in the press. They are not vote predictions: the leadership election is a secret ballot.</li>
-      <li>Weight = 1 + 9 x (years in Congress, House plus Senate, as of January 2027) / 50. The longest-serving member gets 10 and a brand-new senator gets 1.</li>
-      <li>Schumer himself is left out. Mary Peltola (Alaska) and Scott Colom (Mississippi) are left out because their races were uncalled.</li>
-      <li>The four retiring senators and Governor-elect Klobuchar are current senators, so they are included in the main figure, but they are not expected to vote in the leadership election. The group table shows the figure without them.</li>
-      <li>A score of 0 means nothing was found, not that the senator is neutral. Several are close Schumer allies who have simply not been quoted.</li>
-    </ul>
-  </details>
+  <details><summary>How the scores and weights were set, and what to be careful about</summary><ul id="method"></ul></details>
 </div>
 <script>
-const ALL='All current and incoming';
+const FILES={house:'house.json',senate:'senate.json'};
+const $=id=>document.getElementById(id);
 const fmtAvg=v=>(v>0?'+':'')+Number(v).toFixed(2);
 const fmtScore=v=>(v>0?'+':'')+v;
-dash.calc('summary',{inputs:['senators'],title:'Average score by group',description:'Simple and seniority-weighted average of the scores, for all senators and for subgroups.',fn:(senators)=>{
-  const r2=x=>Math.round(x*100)/100;
-  const row=(group,rows)=>{const n=rows.length;let s=0,w=0,ws=0,pos=0,neg=0;rows.forEach(r=>{const sc=+r.score,wt=+r.weight;s+=sc;w+=wt;ws+=wt*sc;if(sc>0)pos++;if(sc<0)neg++;});return{group,n,simple:n?r2(s/n):0,weighted:w?r2(ws/w):0,pos,neg,zero:n-pos-neg};};
-  const inc=r=>String(r.status).startsWith('Incoming');
-  return[
-    row('All current and incoming',senators),
-    row('Expected to vote in the leadership election',senators.filter(r=>inc(r)||r.status==='Returning')),
-    row('On record only (non-zero scores)',senators.filter(r=>+r.score!==0)),
-    row('Current senators',senators.filter(r=>!inc(r))),
-    row('Incoming senators',senators.filter(inc))
-  ];}});
-dash.calc('dist',{inputs:['senators'],title:'Senators at each score',description:'Count and names of senators at each score from -5 to +5.',fn:(senators)=>{
-  const out=[];for(let s=-5;s<=5;s++){const m=senators.filter(r=>+r.score===s);out.push({score:s,count:m.length,names:m.map(r=>r.senator).join(', ')});}return out;}});
-dash.draw('fig',el=>{
-  const d=dash.data('summary');const row=d.status==='ok'&&Array.isArray(d.data)?d.data.find(r=>r.group===el.dataset.group):null;
-  if(!row){el.textContent='—';return;}
-  const f=el.dataset.f,v=row[f];el.textContent=(f==='simple'||f==='weighted')?fmtAvg(v):String(v);
-});
-dash.draw('groups',tb=>{
-  const d=dash.data('summary');tb.replaceChildren();if(d.status!=='ok'||!Array.isArray(d.data))return;
-  d.data.forEach(r=>{const tr=document.createElement('tr');
-    [[r.group,''],[r.n,'num'],[fmtAvg(r.simple),'num'],[fmtAvg(r.weighted),'num']].forEach(([t,c])=>{const td=document.createElement('td');td.textContent=t;if(c)td.className=c;tr.appendChild(td);});
-    tb.appendChild(tr);});
-});
-dash.draw('rows',tb=>{
-  const d=dash.data('senators');tb.replaceChildren();if(d.status!=='ok'||!Array.isArray(d.data))return;
-  const sel=document.getElementById('sm-sort');const mode=sel?sel.value:'weight';
-  const rows=d.data.slice();
-  const by={weight:(a,b)=>(+b.weight)-(+a.weight)||String(a.senator).localeCompare(b.senator),asc:(a,b)=>(+a.score)-(+b.score)||(+b.weight)-(+a.weight),desc:(a,b)=>(+b.score)-(+a.score)||(+b.weight)-(+a.weight),name:(a,b)=>String(a.senator).localeCompare(b.senator)};
-  rows.sort(by[mode]||by.weight);
-  rows.forEach(r=>{const tr=document.createElement('tr');const sc=+r.score;
-    [[r.senator,''],[r.state,''],[r.status,''],[r.years,'num'],[(+r.weight).toFixed(2),'num'],[fmtScore(sc),'num'+(sc<0?' neg':sc>0?' pos':'')],[r.basis,'basis']].forEach(([t,c])=>{const td=document.createElement('td');td.textContent=t;if(c)td.className=c;tr.appendChild(td);});
-    tb.appendChild(tr);});
-});
-document.querySelectorAll('#sm-sort').forEach(s=>s.addEventListener('change',()=>dash.draw('rows')));
-dash.draw('meter',el=>{
-  const d=dash.data('summary');const row=d.status==='ok'&&Array.isArray(d.data)?d.data.find(r=>r.group===ALL):null;
-  el.replaceChildren();if(!row){el.textContent='—';return;}
-  const W=Math.max(260,el.clientWidth||320),H=110,m={l:18,r:18};
-  const x=d3.scaleLinear().domain([-5,5]).range([m.l,W-m.r]);
-  const svg=d3.select(el).append('svg').attr('width','100%').attr('viewBox','0 0 '+W+' '+H).attr('role','img').attr('aria-label','Scale from -5 to +5 showing the simple average at '+fmtAvg(row.simple)+' and the seniority-weighted average at '+fmtAvg(row.weighted));
-  const y=58;
-  svg.append('line').attr('x1',x(-5)).attr('x2',x(5)).attr('y1',y).attr('y2',y).style('stroke','var(--cds-chart-axis)').style('stroke-width',2);
-  d3.range(-5,6).forEach(t=>{svg.append('line').attr('x1',x(t)).attr('x2',x(t)).attr('y1',y-5).attr('y2',y+5).style('stroke','var(--cds-chart-axis)');
-    svg.append('text').attr('x',x(t)).attr('y',y+20).attr('text-anchor','middle').text(fmtScore(t));});
+let D=null,cur=null;
+const isInc=r=>String(r.status).startsWith('Incoming');
+const FILTERS={all:()=>true,current:r=>!isInc(r),incoming:isInc,onrecord:r=>+r.score!==0,voting:r=>isInc(r)||r.status==='Returning'};
+function stats(rows){const n=rows.length;let s=0,w=0,ws=0,pos=0,neg=0;rows.forEach(r=>{const sc=+r.score,wt=+r.weight;s+=sc;w+=wt;ws+=wt*sc;if(sc>0)pos++;if(sc<0)neg++;});return{n,simple:n?s/n:0,weighted:w?ws/w:0,pos,neg,zero:n-pos-neg};}
+function td(tr,text,cls){const c=document.createElement('td');c.textContent=text;if(cls)c.className=cls;tr.appendChild(c);}
+function render(){
+  if(!D)return;
+  const groups=D.groups.map(g=>({label:g.label,rows:D.rows.filter(FILTERS[g.filter]||FILTERS.all)})).map(g=>Object.assign(g,stats(g.rows)));
+  const h=groups[0];
+  $('title').textContent=D.title;
+  $('subtitle').textContent=D.subtitle+', public statements through '+D.through+'.'+(D.note?' '+D.note:'');
+  $('lede').textContent='Across '+h.n+' '+D.people+', '+D.leader+' scores '+fmtAvg(h.simple)+' on a simple average and '+fmtAvg(h.weighted)+' weighted by seniority, on a scale from -5 (outright opposition) to +5 (vocal support). '+h.pos+' are on record in support, '+h.neg+' are critical, noncommittal or opposed, and '+h.zero+' have said nothing found on the record.';
+  $('simple').textContent=fmtAvg(h.simple);$('weighted').textContent=fmtAvg(h.weighted);
+  $('context').textContent=D.context||'';
+  $('person-col').textContent=D.person_col||'Member';
+  const gb=$('groups');gb.replaceChildren();
+  groups.forEach(g=>{const tr=document.createElement('tr');td(tr,g.label);td(tr,g.n,'num');td(tr,fmtAvg(g.simple),'num');td(tr,fmtAvg(g.weighted),'num');gb.appendChild(tr);});
+  const ml=$('method');ml.replaceChildren();(D.method||[]).forEach(t=>{const li=document.createElement('li');li.textContent=t;ml.appendChild(li);});
+  drawMeter(h);drawHist(h.rows);drawRows();
+}
+function drawRows(){
+  if(!D)return;const tb=$('rows');tb.replaceChildren();
+  let rows=D.rows.slice();if($('show').value==='onrecord')rows=rows.filter(FILTERS.onrecord);
+  const by={weight:(a,b)=>(+b.weight)-(+a.weight)||String(a.name).localeCompare(b.name),asc:(a,b)=>(+a.score)-(+b.score)||(+b.weight)-(+a.weight),desc:(a,b)=>(+b.score)-(+a.score)||(+b.weight)-(+a.weight),name:(a,b)=>String(a.name).localeCompare(b.name)};
+  rows.sort(by[$('sort').value]||by.asc);
+  rows.forEach(r=>{const tr=document.createElement('tr');const sc=+r.score;td(tr,r.name);td(tr,r.state);td(tr,r.status);td(tr,r.years,'num');td(tr,(+r.weight).toFixed(2),'num');td(tr,fmtScore(sc),'num'+(sc<0?' neg':sc>0?' pos':''));td(tr,r.basis,'basis');tb.appendChild(tr);});
+  $('rowcount').textContent='Showing '+rows.length+' of '+D.rows.length+'.';
+}
+function drawMeter(h){
+  const el=$('meter');el.replaceChildren();
+  const W=Math.max(260,el.clientWidth||320),H=110,l=18,r=18,y=58;
+  const x=d3.scaleLinear().domain([-5,5]).range([l,W-r]);
+  const svg=d3.select(el).append('svg').attr('width','100%').attr('viewBox','0 0 '+W+' '+H).attr('role','img').attr('aria-label','Scale from -5 to +5 showing the simple average at '+fmtAvg(h.simple)+' and the seniority-weighted average at '+fmtAvg(h.weighted));
+  svg.append('line').attr('x1',x(-5)).attr('x2',x(5)).attr('y1',y).attr('y2',y).style('stroke','var(--axis)').style('stroke-width',2);
+  d3.range(-5,6).forEach(t=>{svg.append('line').attr('x1',x(t)).attr('x2',x(t)).attr('y1',y-5).attr('y2',y+5).style('stroke','var(--axis)');svg.append('text').attr('x',x(t)).attr('y',y+20).attr('text-anchor','middle').text(fmtScore(t));});
   svg.append('text').attr('x',x(-5)).attr('y',y+38).attr('text-anchor','start').text('Opposition');
   svg.append('text').attr('x',x(0)).attr('y',y+38).attr('text-anchor','middle').text('Silence');
   svg.append('text').attr('x',x(5)).attr('y',y+38).attr('text-anchor','end').text('Support');
-  const marks=[{v:+row.simple,label:'Simple '+fmtAvg(row.simple),c:dash.colors[0],anchor:'end',dx:-8},{v:+row.weighted,label:'Weighted '+fmtAvg(row.weighted),c:dash.colors[1]||dash.colors[0],anchor:'start',dx:8}];
-  marks.forEach(k=>{svg.append('circle').attr('cx',x(k.v)).attr('cy',y).attr('r',7).style('fill',k.c).style('stroke','var(--color-bg)').style('stroke-width',2);
-    svg.append('line').attr('x1',x(k.v)).attr('x2',x(k.v)).attr('y1',y-8).attr('y2',y-26).style('stroke',k.c);
-    svg.append('text').attr('x',x(k.v)+k.dx).attr('y',y-28).attr('text-anchor',k.anchor).style('fill','var(--color-fg)').style('font-size','12px').text(k.label);});
-});
-dash.draw('hist',el=>{
-  const d=dash.data('dist');el.replaceChildren();
-  if(d.status!=='ok'||!Array.isArray(d.data)){el.textContent='—';return;}
-  const data=d.data;const W=Math.max(260,el.clientWidth||320),H=230,m={t:22,r:8,b:40,l:8};
+  const a={v:h.simple,label:'Simple '+fmtAvg(h.simple),c:'var(--c1)'},b={v:h.weighted,label:'Weighted '+fmtAvg(h.weighted),c:'var(--c2)'};
+  const left=a.v<=b.v?a:b,right=left===a?b:a;left.anchor='end';left.dx=-8;left.ty=y-28;right.anchor='start';right.dx=8;right.ty=y-28;
+  [left,right].forEach(k=>{svg.append('line').attr('x1',x(k.v)).attr('x2',x(k.v)).attr('y1',y-8).attr('y2',y-26).style('stroke',k.c);
+    svg.append('circle').attr('cx',x(k.v)).attr('cy',y).attr('r',7).style('fill',k.c).style('stroke','var(--bg)').style('stroke-width',2);
+    svg.append('text').attr('x',x(k.v)+k.dx).attr('y',k.ty).attr('text-anchor',k.anchor).style('fill','var(--fg)').style('font-size','12px').text(k.label);});
+}
+function drawHist(rows){
+  const el=$('hist');el.replaceChildren();
+  const data=d3.range(-5,6).map(s=>{const m=rows.filter(r=>+r.score===s);return{score:s,count:m.length,names:m.map(r=>r.name)};});
+  const W=Math.max(260,el.clientWidth||320),H=230,m={t:22,r:8,b:40,l:8};
   const x=d3.scaleBand().domain(data.map(r=>r.score)).range([m.l,W-m.r]).padding(0.18);
-  const y=d3.scaleLinear().domain([0,d3.max(data,r=>+r.count)||1]).range([H-m.b,m.t]);
-  const svg=d3.select(el).append('svg').attr('width','100%').attr('viewBox','0 0 '+W+' '+H).attr('role','img').attr('aria-label','Bar chart of the number of senators at each score from -5 to +5');
-  svg.append('line').attr('x1',m.l).attr('x2',W-m.r).attr('y1',H-m.b).attr('y2',H-m.b).style('stroke','var(--cds-chart-axis)');
-  const tip=d3.select(el).append('div').attr('class','sm-tip').style('display','none');
-  const show=(ev,r)=>{tip.style('display','block');tip.selectAll('*').remove();tip.append('b').text('Score '+fmtScore(r.score)+': '+r.count+(r.count===1?' senator':' senators'));tip.append('span').text(r.names||'No one');
-    const bw=el.clientWidth||W;const left=Math.min(Math.max(0,(x(r.score)+x.bandwidth()/2)/W*bw-130),Math.max(0,bw-262));tip.style('left',left+'px').style('top','0px');};
+  const y=d3.scaleLinear().domain([0,d3.max(data,r=>r.count)||1]).range([H-m.b,m.t]);
+  const svg=d3.select(el).append('svg').attr('width','100%').attr('viewBox','0 0 '+W+' '+H).attr('role','img').attr('aria-label','Bar chart of the number of members at each score from -5 to +5');
+  svg.append('line').attr('x1',m.l).attr('x2',W-m.r).attr('y1',H-m.b).attr('y2',H-m.b).style('stroke','var(--axis)');
+  const tip=d3.select(el).append('div').attr('class','tip').style('display','none');
+  const show=(ev,r)=>{tip.style('display','block');tip.selectAll('*').remove();tip.append('b').text('Score '+fmtScore(r.score)+': '+r.count+(r.count===1?' member':' members'));
+    const shown=r.names.slice(0,12).join(', ')+(r.names.length>12?', and '+(r.names.length-12)+' more':'');tip.append('span').text(shown||'No one');
+    const bw=el.clientWidth||W;tip.style('left',Math.min(Math.max(0,(x(r.score)+x.bandwidth()/2)/W*bw-130),Math.max(0,bw-262))+'px');};
   const g=svg.selectAll('g.b').data(data).join('g').attr('class','b');
-  g.append('rect').attr('x',r=>x(r.score)).attr('width',x.bandwidth()).attr('y',r=>y(+r.count)).attr('height',r=>H-m.b-y(+r.count)).attr('rx',2).style('fill',r=>r.score===0?'var(--cds-chart-muted)':dash.colors[0]);
+  g.append('rect').attr('x',r=>x(r.score)).attr('width',x.bandwidth()).attr('y',r=>y(r.count)).attr('height',r=>H-m.b-y(r.count)).attr('rx',2).style('fill',r=>r.score===0?'var(--zero)':'var(--c1)');
+  g.append('text').attr('x',r=>x(r.score)+x.bandwidth()/2).attr('y',r=>y(r.count)-5).attr('text-anchor','middle').style('fill','var(--fg)').text(r=>r.count);
+  g.append('text').attr('x',r=>x(r.score)+x.bandwidth()/2).attr('y',H-m.b+15).attr('text-anchor','middle').text(r=>fmtScore(r.score));
   g.append('rect').attr('x',r=>x(r.score)).attr('width',x.bandwidth()).attr('y',m.t).attr('height',H-m.b-m.t).style('fill','transparent').style('cursor','pointer')
     .on('pointerenter',show).on('pointermove',show).on('click',show).on('pointerleave',()=>tip.style('display','none'));
-  g.append('text').attr('x',r=>x(r.score)+x.bandwidth()/2).attr('y',r=>y(+r.count)-5).attr('text-anchor','middle').style('fill','var(--color-fg)').text(r=>r.count);
-  g.append('text').attr('x',r=>x(r.score)+x.bandwidth()/2).attr('y',H-m.b+15).attr('text-anchor','middle').text(r=>fmtScore(r.score));
   svg.append('text').attr('x',m.l).attr('y',H-6).attr('text-anchor','start').text('Opposition');
   svg.append('text').attr('x',W-m.r).attr('y',H-6).attr('text-anchor','end').text('Support');
-});
-</script>
-
-<script>
-Promise.all([fetch('senators.json',{cache:'no-store'}).then(r=>r.json()),fetch('meta.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>null)]).then(([rows,meta])=>{
-  dash._set('senators',rows);dash._all();
-  if(meta){const t=document.getElementById('through');if(t&&meta.through)t.textContent=meta.through;const n=document.getElementById('note');if(n&&meta.note)n.textContent=meta.note;}
-});
-let rt;window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>dash._all(),150)});
+}
+function choose(ch,push){
+  if(!FILES[ch])ch='house';cur=ch;
+  document.querySelectorAll('.seg button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ch===ch)));
+  if(push)history.replaceState(null,'','#'+ch);
+  fetch(FILES[ch],{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json();}).then(d=>{if(cur!==ch)return;D=d;$('show').value=d.rows.length>100?'onrecord':'all';$('sort').value=d.rows.length>100?'asc':'weight';render();})
+    .catch(()=>{$('lede').textContent='The data could not be loaded. Try refreshing the page.';});
+}
+document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.ch,true)));
+$('show').addEventListener('change',drawRows);$('sort').addEventListener('change',drawRows);
+window.addEventListener('hashchange',()=>choose(location.hash.slice(1),false));
+let rt;window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(render,150);});
+choose(location.hash.slice(1)||'house',false);
 </script>
 </body></html>

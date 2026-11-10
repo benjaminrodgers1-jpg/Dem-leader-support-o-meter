@@ -1,0 +1,2057 @@
+{
+"key": "house",
+"label": "House speaker",
+"leader": "Jeffries",
+"title": "Jeffries support meter",
+"subtitle": "House Democratic caucus",
+"people": "current House Democrats",
+"person_col": "Member",
+"through": "Nov 9, 2026",
+"note": "",
+"groups": [
+{
+"label": "Current House Democrats",
+"filter": "current"
+},
+{
+"label": "Incoming members on record so far",
+"filter": "incoming"
+},
+{
+"label": "Everyone listed",
+"filter": "all"
+},
+{
+"label": "On record only (non-zero scores)",
+"filter": "onrecord"
+}
+],
+"context": "The headline covers the 213 current voting House Democrats. Nearly all have said nothing on the record, which scores 0 and holds both averages near zero. Most of the public hesitation comes from incoming members, shown as their own group below. Unlike the Senate's secret ballot, the speaker is chosen in a public floor vote on Jan. 3 and needs a majority of the whole House.",
+"method": [
+"Scale: +5 repeated vocal advocacy; +4 explicit endorsement with a stated reason; +3 says they will support him; +2 defends his record or leadership; +1 mild positive signal; 0 no statement found; -1 declines to commit when asked; -2 calls for new leadership or a leadership debate without ruling him out; -3 withholds support and sets conditions; -4 says it is time for new leadership, backs someone else or says their vote is currently no; -5 flatly says they will not support him.",
+"Scores are one reader's judgment of public statements reported in the press. They are not vote predictions.",
+"Weight = 1 + 9 x (years in the House as of January 2027) / 46. The longest-serving member gets 10 and a new member gets 1.",
+"Jeffries himself and the non-voting delegates are left out.",
+"Incoming members are listed only once they have said something on the record, so they are kept out of the headline figure: the full freshman class is not final while races are still being called. Their group average therefore covers only those who have spoken.",
+"The roster is the current House Democratic caucus. It does not yet mark members who are retiring or lost, and who will not vote for speaker in January.",
+"A score of 0 means nothing was found on the record, not that the member is neutral. Many are allies who have simply not been quoted."
+],
+"rows": [
+{
+"name": "Steny H. Hoyer",
+"state": "MD",
+"status": "Current",
+"years": 46,
+"weight": 10.0,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Marcy Kaptur",
+"state": "OH",
+"status": "Current",
+"years": 44,
+"weight": 9.61,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Frank Pallone, Jr.",
+"state": "NJ",
+"status": "Current",
+"years": 40,
+"weight": 8.83,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Nancy Pelosi",
+"state": "CA",
+"status": "Current",
+"years": 40,
+"weight": 8.83,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Richard E. Neal",
+"state": "MA",
+"status": "Current",
+"years": 38,
+"weight": 8.43,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Rosa L. DeLauro",
+"state": "CT",
+"status": "Current",
+"years": 36,
+"weight": 8.04,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Maxine Waters",
+"state": "CA",
+"status": "Current",
+"years": 36,
+"weight": 8.04,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Sanford D. Bishop, Jr.",
+"state": "GA",
+"status": "Current",
+"years": 34,
+"weight": 7.65,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "James E. Clyburn",
+"state": "SC",
+"status": "Current",
+"years": 34,
+"weight": 7.65,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jerrold Nadler",
+"state": "NY",
+"status": "Current",
+"years": 34,
+"weight": 7.65,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Robert C. \"Bobby\" Scott",
+"state": "VA",
+"status": "Current",
+"years": 34,
+"weight": 7.65,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Bennie G. Thompson",
+"state": "MS",
+"status": "Current",
+"years": 34,
+"weight": 7.65,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Nydia M. Velázquez",
+"state": "NY",
+"status": "Current",
+"years": 34,
+"weight": 7.65,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Lloyd Doggett",
+"state": "TX",
+"status": "Current",
+"years": 32,
+"weight": 7.26,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Zoe Lofgren",
+"state": "CA",
+"status": "Current",
+"years": 32,
+"weight": 7.26,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Danny K. Davis",
+"state": "IL",
+"status": "Current",
+"years": 30,
+"weight": 6.87,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Diana DeGette",
+"state": "CO",
+"status": "Current",
+"years": 30,
+"weight": 6.87,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "James P. McGovern",
+"state": "MA",
+"status": "Current",
+"years": 30,
+"weight": 6.87,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Gregory W. Meeks",
+"state": "NY",
+"status": "Current",
+"years": 30,
+"weight": 6.87,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Brad Sherman",
+"state": "CA",
+"status": "Current",
+"years": 30,
+"weight": 6.87,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Adam Smith",
+"state": "WA",
+"status": "Current",
+"years": 30,
+"weight": 6.87,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "John B. Larson",
+"state": "CT",
+"status": "Current",
+"years": 28,
+"weight": 6.48,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Janice D. Schakowsky",
+"state": "IL",
+"status": "Current",
+"years": 28,
+"weight": 6.48,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Mike Thompson",
+"state": "CA",
+"status": "Current",
+"years": 28,
+"weight": 6.48,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Rick Larsen",
+"state": "WA",
+"status": "Current",
+"years": 26,
+"weight": 6.09,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Betty McCollum",
+"state": "MN",
+"status": "Current",
+"years": 26,
+"weight": 6.09,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Stephen F. Lynch",
+"state": "MA",
+"status": "Current",
+"years": 25,
+"weight": 5.89,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Linda T. Sánchez",
+"state": "CA",
+"status": "Current",
+"years": 24,
+"weight": 5.7,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Emanuel Cleaver",
+"state": "MO",
+"status": "Current",
+"years": 22,
+"weight": 5.3,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jim Costa",
+"state": "CA",
+"status": "Current",
+"years": 22,
+"weight": 5.3,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Henry Cuellar",
+"state": "TX",
+"status": "Current",
+"years": 22,
+"weight": 5.3,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Al Green",
+"state": "TX",
+"status": "Current",
+"years": 22,
+"weight": 5.3,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Doris O. Matsui",
+"state": "CA",
+"status": "Current",
+"years": 22,
+"weight": 5.3,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Gwen Moore",
+"state": "WI",
+"status": "Current",
+"years": 22,
+"weight": 5.3,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Debbie Wasserman Schultz",
+"state": "FL",
+"status": "Current",
+"years": 22,
+"weight": 5.3,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Kathy Castor",
+"state": "FL",
+"status": "Current",
+"years": 20,
+"weight": 4.91,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Yvette D. Clarke",
+"state": "NY",
+"status": "Current",
+"years": 20,
+"weight": 4.91,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Steve Cohen",
+"state": "TN",
+"status": "Current",
+"years": 20,
+"weight": 4.91,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Joe Courtney",
+"state": "CT",
+"status": "Current",
+"years": 20,
+"weight": 4.91,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Henry C. \"Hank\" Johnson, Jr.",
+"state": "GA",
+"status": "Current",
+"years": 20,
+"weight": 4.91,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "André Carson",
+"state": "IN",
+"status": "Current",
+"years": 19,
+"weight": 4.72,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "James A. Himes",
+"state": "CT",
+"status": "Current",
+"years": 18,
+"weight": 4.52,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Chellie Pingree",
+"state": "ME",
+"status": "Current",
+"years": 18,
+"weight": 4.52,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Mike Quigley",
+"state": "IL",
+"status": "Current",
+"years": 18,
+"weight": 4.52,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Paul Tonko",
+"state": "NY",
+"status": "Current",
+"years": 18,
+"weight": 4.52,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Judy Chu",
+"state": "CA",
+"status": "Current",
+"years": 17,
+"weight": 4.33,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "John Garamendi",
+"state": "CA",
+"status": "Current",
+"years": 17,
+"weight": 4.33,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Bill Foster",
+"state": "IL",
+"status": "Current",
+"years": 17,
+"weight": 4.33,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "William R. Keating",
+"state": "MA",
+"status": "Current",
+"years": 16,
+"weight": 4.13,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Terri A. Sewell",
+"state": "AL",
+"status": "Current",
+"years": 16,
+"weight": 4.13,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Frederica S. Wilson",
+"state": "FL",
+"status": "Current",
+"years": 16,
+"weight": 4.13,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Dina Titus",
+"state": "NV",
+"status": "Current",
+"years": 16,
+"weight": 4.13,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Kweisi Mfume",
+"state": "MD",
+"status": "Current",
+"years": 16,
+"weight": 4.13,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Suzanne Bonamici",
+"state": "OR",
+"status": "Current",
+"years": 15,
+"weight": 3.93,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Suzan K. DelBene",
+"state": "WA",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jared Huffman",
+"state": "CA",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Ami Bera",
+"state": "CA",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Julia Brownley",
+"state": "CA",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Raul Ruiz",
+"state": "CA",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Mark Takano",
+"state": "CA",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Juan Vargas",
+"state": "CA",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Scott H. Peters",
+"state": "CA",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Lois Frankel",
+"state": "FL",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Grace Meng",
+"state": "NY",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Joyce Beatty",
+"state": "OH",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Joaquin Castro",
+"state": "TX",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Marc A. Veasey",
+"state": "TX",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Mark Pocan",
+"state": "WI",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Robin L. Kelly",
+"state": "IL",
+"status": "Current",
+"years": 14,
+"weight": 3.74,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Katherine M. Clark",
+"state": "MA",
+"status": "Current",
+"years": 13,
+"weight": 3.54,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Donald Norcross",
+"state": "NJ",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Alma S. Adams",
+"state": "NC",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Mark DeSaulnier",
+"state": "CA",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Pete Aguilar",
+"state": "CA",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Ted Lieu",
+"state": "CA",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Norma J. Torres",
+"state": "CA",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Seth Moulton",
+"state": "MA",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Debbie Dingell",
+"state": "MI",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Bonnie Watson Coleman",
+"state": "NJ",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Brendan F. Boyle",
+"state": "PA",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Donald S. Beyer, Jr.",
+"state": "VA",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Bradley Scott Schneider",
+"state": "IL",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Ed Case",
+"state": "HI",
+"status": "Current",
+"years": 12,
+"weight": 3.35,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Dwight Evans",
+"state": "PA",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Ro Khanna",
+"state": "CA",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jimmy Panetta",
+"state": "CA",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Salud O. Carbajal",
+"state": "CA",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Nanette Diaz Barragán",
+"state": "CA",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "J. Luis Correa",
+"state": "CA",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Darren Soto",
+"state": "FL",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Raja Krishnamoorthi",
+"state": "IL",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jamie Raskin",
+"state": "MD",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Josh Gottheimer",
+"state": "NJ",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Adriano Espaillat",
+"state": "NY",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Vicente Gonzalez",
+"state": "TX",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Pramila Jayapal",
+"state": "WA",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 2,
+"basis": "Nov 5 (KUOW): called him the sole candidate and said Democrats should help him succeed; no explicit vote pledge"
+},
+{
+"name": "Steven Horsford",
+"state": "NV",
+"status": "Current",
+"years": 10,
+"weight": 2.96,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jimmy Gomez",
+"state": "CA",
+"status": "Current",
+"years": 9,
+"weight": 2.76,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Thomas R. Suozzi",
+"state": "NY",
+"status": "Current",
+"years": 9,
+"weight": 2.76,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Joseph D. Morelle",
+"state": "NY",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Mary Gay Scanlon",
+"state": "PA",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Greg Stanton",
+"state": "AZ",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Josh Harder",
+"state": "CA",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Mike Levin",
+"state": "CA",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Joe Neguse",
+"state": "CO",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jason Crow",
+"state": "CO",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jahana Hayes",
+"state": "CT",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Lucy McBath",
+"state": "GA",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jesús G. \"Chuy\" García",
+"state": "IL",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Sean Casten",
+"state": "IL",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Lauren Underwood",
+"state": "IL",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Sharice Davids",
+"state": "KS",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Lori Trahan",
+"state": "MA",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Ayanna Pressley",
+"state": "MA",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Haley M. Stevens",
+"state": "MI",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Rashida Tlaib",
+"state": "MI",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Angie Craig",
+"state": "MN",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Ilhan Omar",
+"state": "MN",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Chris Pappas",
+"state": "NH",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Susie Lee",
+"state": "NV",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Alexandria Ocasio-Cortez",
+"state": "NY",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 4,
+"basis": "Said she will support Jeffries, citing his commitment to funding New York City public housing"
+},
+{
+"name": "Madeleine Dean",
+"state": "PA",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Chrissy Houlahan",
+"state": "PA",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Lizzie Fletcher",
+"state": "TX",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Veronica Escobar",
+"state": "TX",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Sylvia R. Garcia",
+"state": "TX",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Kim Schrier",
+"state": "WA",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jared F. Golden",
+"state": "ME",
+"status": "Current",
+"years": 8,
+"weight": 2.57,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Sara Jacobs",
+"state": "CA",
+"status": "Current",
+"years": 6,
+"weight": 2.17,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Nikema Williams",
+"state": "GA",
+"status": "Current",
+"years": 6,
+"weight": 2.17,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Frank J. Mrvan",
+"state": "IN",
+"status": "Current",
+"years": 6,
+"weight": 2.17,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jake Auchincloss",
+"state": "MA",
+"status": "Current",
+"years": 6,
+"weight": 2.17,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Deborah K. Ross",
+"state": "NC",
+"status": "Current",
+"years": 6,
+"weight": 2.17,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Teresa Leger Fernandez",
+"state": "NM",
+"status": "Current",
+"years": 6,
+"weight": 2.17,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Ritchie Torres",
+"state": "NY",
+"status": "Current",
+"years": 6,
+"weight": 2.17,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Marilyn Strickland",
+"state": "WA",
+"status": "Current",
+"years": 6,
+"weight": 2.17,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Troy A. Carter",
+"state": "LA",
+"status": "Current",
+"years": 6,
+"weight": 2.17,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Melanie A. Stansbury",
+"state": "NM",
+"status": "Current",
+"years": 6,
+"weight": 2.17,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Cleo Fields",
+"state": "LA",
+"status": "Current",
+"years": 6,
+"weight": 2.17,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Shontel M. Brown",
+"state": "OH",
+"status": "Current",
+"years": 5,
+"weight": 1.98,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Patrick Ryan",
+"state": "NY",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Kevin Mullin",
+"state": "CA",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Sydney Kamlager-Dove",
+"state": "CA",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Robert Garcia",
+"state": "CA",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Brittany Pettersen",
+"state": "CO",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Maxwell Frost",
+"state": "FL",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jared Moskowitz",
+"state": "FL",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jill N. Tokuda",
+"state": "HI",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jonathan L. Jackson",
+"state": "IL",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Delia C. Ramirez",
+"state": "IL",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Nikki Budzinski",
+"state": "IL",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Eric Sorensen",
+"state": "IL",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Morgan McGarvey",
+"state": "KY",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Glenn Ivey",
+"state": "MD",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Hillary J. Scholten",
+"state": "MI",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Shri Thanedar",
+"state": "MI",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Donald G. Davis",
+"state": "NC",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Valerie P. Foushee",
+"state": "NC",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Robert Menendez",
+"state": "NJ",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Gabe Vasquez",
+"state": "NM",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Daniel S. Goldman",
+"state": "NY",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Greg Landsman",
+"state": "OH",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Emilia Strong Sykes",
+"state": "OH",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Val T. Hoyle",
+"state": "OR",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Andrea Salinas",
+"state": "OR",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Summer L. Lee",
+"state": "PA",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Christopher R. Deluzio",
+"state": "PA",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Seth Magaziner",
+"state": "RI",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jasmine Crockett",
+"state": "TX",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Greg Casar",
+"state": "TX",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 4,
+"basis": "Sept 2026 (Bloomberg, via The Lever): gave a full endorsement of Jeffries as Progressive Caucus chair"
+},
+{
+"name": "Becca Balint",
+"state": "VT",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Marie Gluesenkamp Perez",
+"state": "WA",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Jennifer L. McClellan",
+"state": "VA",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Gilbert Ray Cisneros, Jr.",
+"state": "CA",
+"status": "Current",
+"years": 4,
+"weight": 1.78,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Gabe Amo",
+"state": "RI",
+"status": "Current",
+"years": 3,
+"weight": 1.59,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Timothy M. Kennedy",
+"state": "NY",
+"status": "Current",
+"years": 3,
+"weight": 1.59,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "LaMonica McIver",
+"state": "NJ",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Shomari Figures",
+"state": "AL",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Yassamin Ansari",
+"state": "AZ",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Lateefah Simon",
+"state": "CA",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Adam Gray",
+"state": "CA",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Sam T. Liccardo",
+"state": "CA",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "George Whitesides",
+"state": "CA",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Luz M. Rivas",
+"state": "CA",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Laura Friedman",
+"state": "CA",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Derek Tran",
+"state": "CA",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Dave Min",
+"state": "CA",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Sarah McBride",
+"state": "DE",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Johnny Olszewski, Jr.",
+"state": "MD",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Sarah Elfreth",
+"state": "MD",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "April McClain Delaney",
+"state": "MD",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Kristen McDonald Rivet",
+"state": "MI",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Kelly Morrison",
+"state": "MN",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Wesley Bell",
+"state": "MO",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Maggie Goodlander",
+"state": "NH",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Herbert C. Conaway, Jr.",
+"state": "NJ",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Nellie Pou",
+"state": "NJ",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Laura Gillen",
+"state": "NY",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "George Latimer",
+"state": "NY",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Josh Riley",
+"state": "NY",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "John W. Mannion",
+"state": "NY",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Maxine Dexter",
+"state": "OR",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Janelle S. Bynum",
+"state": "OR",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Julie Johnson",
+"state": "TX",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Eugene Simon Vindman",
+"state": "VA",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Suhas Subramanyam",
+"state": "VA",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Emily Randall",
+"state": "WA",
+"status": "Current",
+"years": 2,
+"weight": 1.39,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "James R. Walkinshaw",
+"state": "VA",
+"status": "Current",
+"years": 1,
+"weight": 1.2,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Adelita S. Grijalva",
+"state": "AZ",
+"status": "Current",
+"years": 1,
+"weight": 1.2,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Christian D. Menefee",
+"state": "TX",
+"status": "Current",
+"years": 1,
+"weight": 1.2,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Analilia Mejia",
+"state": "NJ",
+"status": "Current",
+"years": 1,
+"weight": 1.2,
+"score": -1,
+"basis": "Late Oct (The Lever): had not committed; said 'no king in the House'"
+},
+{
+"name": "Everton Blair Jr.",
+"state": "GA",
+"status": "Current",
+"years": 0,
+"weight": 1.0,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Aisha Wahab",
+"state": "CA",
+"status": "Current",
+"years": 0,
+"weight": 1.0,
+"score": 0,
+"basis": "No on-record statement found"
+},
+{
+"name": "Angela Gonzales-Torres",
+"state": "CA",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -4,
+"basis": "Nov 9 (Democracy Now via Truthout): 'As of right now, my vote is no'; says Jeffries must work for her vote"
+},
+{
+"name": "Melat Kiros",
+"state": "CO",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -3,
+"basis": "Said she won't back a leader who takes corporate PAC money (Axios, Aug); Nov 9 said it is 'about the agenda' and stayed uncommitted"
+},
+{
+"name": "Claire Valdez",
+"state": "NY",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -1,
+"basis": "Nov 9: 'so far uncommitted'; expects the party to unify"
+},
+{
+"name": "Darializa Avila Chevalier",
+"state": "NY",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -1,
+"basis": "Nov 9: 'I haven't come to a decision yet'; called her talk with Jeffries positive"
+},
+{
+"name": "Adam Hamawy",
+"state": "NJ",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -1,
+"basis": "Nov 9: not committed, keeping 'that option open'"
+},
+{
+"name": "Katy Padilla Stout",
+"state": "TX",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -1,
+"basis": "Nov 9 (Washington Sun): uncommitted; wants to speak with Jeffries first"
+},
+{
+"name": "Richard Ojeda",
+"state": "NC",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -1,
+"basis": "Nov 9 (Washington Sun): uncommitted; says he is listening"
+},
+{
+"name": "Cyril Jefferson",
+"state": "NC",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 1,
+"basis": "Nov 9 (Washington Sun): said many are trusting Jeffries and his experience"
+},
+{
+"name": "Micah Lasher",
+"state": "NY",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 2,
+"basis": "Nov 9 (Washington Sun): said Jeffries is fostering a real conversation and would be a good speaker"
+},
+{
+"name": "Brad Lander",
+"state": "NY",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 2,
+"basis": "Listed as backing Jeffries in a public tally of statements; no direct quote found"
+},
+{
+"name": "William Lawrence",
+"state": "MI",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 3,
+"basis": "Aug 4 (CNN, via The Lever): committed to voting for Jeffries after earlier hoping for an alternative"
+}
+]
+}

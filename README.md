@@ -1,9 +1,11 @@
 # Dem Leader Support-o-Meter
 
-Tracks public, on-record statements by current and incoming Senate Democratic caucus members on Chuck Schumer as majority leader, scored -5 (outright opposition) to +5 (vocal support), with simple and seniority-weighted averages.
+Tracks public, on-record statements by congressional Democrats on their leaders, scored -5 (outright opposition) to +5 (vocal support), with simple and seniority-weighted averages. A selector at the top switches between the two races.
 
 - `index.html` - the page
-- `senators.json` - one row per senator (score, weight, basis)
-- `meta.json` - "statements through" date and an optional note
+- `house.json` - Hakeem Jeffries as House speaker
+- `senate.json` - Chuck Schumer as Senate majority leader
+
+Each data file holds its own labels, "through" date, notes, method and one row per member (`name, state, status, years, weight, score, basis`).
 
 Scores are a judgment of press-reported statements, not a vote prediction.
