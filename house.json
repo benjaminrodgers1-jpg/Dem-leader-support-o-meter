@@ -2079,6 +2079,24 @@
 "weight": 1.0,
 "score": 3,
 "basis": "Nov 2026 (C-SPAN): said she will support Jeffries for speaker; Ballotpedia reported her IA-3 win"
+},
+{
+"name": "Fred Wellman",
+"state": "MO",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -1,
+"basis": "Nov 10 (Fox News Digital): said he had not made up his mind on speaker; St. Louis Public Radio reported his MO-2 win"
+},
+{
+"name": "Adrian Boafo",
+"state": "MD",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 2,
+"basis": "Nov 10 (Fox News Digital): said Jeffries 'will be a transformative speaker'; no explicit vote pledge; WTOP reported his MD-5 win"
 }
 ]
 }
