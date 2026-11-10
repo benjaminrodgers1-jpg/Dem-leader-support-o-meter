@@ -6,7 +6,7 @@
 "subtitle": "House Democratic caucus",
 "people": "current House Democrats",
 "person_col": "Member",
-"through": "Nov 9, 2026",
+"through": "Nov 10, 2026",
 "note": "",
 "groups": [
 {
@@ -1780,8 +1780,8 @@
 "status": "Current",
 "years": 2,
 "weight": 1.39,
-"score": 0,
-"basis": "No on-record statement found"
+"score": 3,
+"basis": "Nov 10 (Fox News Digital): said he is 'Hakeem Jeffries all the way'"
 },
 {
 "name": "Maggie Goodlander",
@@ -2041,8 +2041,8 @@
 "status": "Incoming",
 "years": 0,
 "weight": 1.0,
-"score": 2,
-"basis": "Listed as backing Jeffries in a public tally of statements; no direct quote found"
+"score": 3,
+"basis": "Nov 10 (Fox News Digital): backed Jeffries and predicted he will be 'overwhelmingly elected'"
 },
 {
 "name": "William Lawrence",
@@ -2052,6 +2052,33 @@
 "weight": 1.0,
 "score": 3,
 "basis": "Aug 4 (CNN, via The Lever): committed to voting for Jeffries after earlier hoping for an alternative"
+},
+{
+"name": "Scott Wiener",
+"state": "CA",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 3,
+"basis": "Nov 10 (Fox News Digital): backed Jeffries for speaker while urging open internal debate; Axios reported his win"
+},
+{
+"name": "Jasmine Clark",
+"state": "GA",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 3,
+"basis": "Nov 10 (Fox News Digital): said she will 'absolutely' vote for Jeffries"
+},
+{
+"name": "Sarah Trone Garriott",
+"state": "IA",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 3,
+"basis": "Nov 2026 (C-SPAN): said she will support Jeffries for speaker; Ballotpedia reported her IA-3 win"
 }
 ]
 }
