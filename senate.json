@@ -6,7 +6,7 @@
 "subtitle": "Senate Democratic caucus",
 "people": "current and incoming senators",
 "person_col": "Senator",
-"through": "Nov 9, 2026",
+"through": "Nov 10, 2026",
 "note": "",
 "groups": [
 {
@@ -271,8 +271,8 @@
 "status": "Returning",
 "years": 16,
 "weight": 3.88,
-"score": -2,
-"basis": "Declined to endorse: 'we need new energy and ideas', but expects Schumer to be re-elected"
+"score": 3,
+"basis": "Nov 9 (CT Mirror): clarified he plans to support Schumer as majority leader after calling for 'new energy'"
 },
 {
 "name": "Brian Schatz",
