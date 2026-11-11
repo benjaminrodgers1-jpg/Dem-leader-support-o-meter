@@ -2014,8 +2014,8 @@
 "status": "Incoming",
 "years": 0,
 "weight": 1.0,
-"score": -1,
-"basis": "Nov 9 (Washington Sun): uncommitted; says he is listening"
+"score": -3,
+"basis": "Nov 11 (Axios): said Jeffries must commit to a corporate PAC ban before he will vote for him"
 },
 {
 "name": "Cyril Jefferson",
@@ -2124,6 +2124,24 @@
 "weight": 1.0,
 "score": 3,
 "basis": "Nov 11 (Axios): said he would join the support for Jeffries; Axios identifies him as a NJ-2 member-elect"
+},
+{
+"name": "Denise Powell",
+"state": "NE",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 3,
+"basis": "Nov 2026 (Nebraska Examiner): said she will be 'proud' to vote for Jeffries for speaker; Axios identifies her as a NE-2 member-elect"
+},
+{
+"name": "Cait Conley",
+"state": "NY",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 3,
+"basis": "Nov 2026 (Newsweek): backed Jeffries for speaker and urged Democrats to set aside differences; Axios identifies her as a member-elect"
 }
 ]
 }
