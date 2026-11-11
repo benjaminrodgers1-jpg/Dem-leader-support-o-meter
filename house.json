@@ -6,7 +6,7 @@
 "subtitle": "House Democratic caucus",
 "people": "current House Democrats",
 "person_col": "Member",
-"through": "Nov 10, 2026",
+"through": "Nov 11, 2026",
 "note": "",
 "groups": [
 {
@@ -2097,6 +2097,24 @@
 "weight": 1.0,
 "score": 2,
 "basis": "Nov 10 (Fox News Digital): said Jeffries 'will be a transformative speaker'; no explicit vote pledge; WTOP reported his MD-5 win"
+},
+{
+"name": "Don Leonard",
+"state": "OH",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -3,
+"basis": "Nov 10 (Newsweek): conditions his vote for Jeffries on votes on Citizens United and the Iran war; WOSU reported his OH-15 win"
+},
+{
+"name": "Patty Garcia",
+"state": "IL",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -1,
+"basis": "Nov 9 (Chicago Sun-Times): uncommitted; said she will be 'united with the progressive caucus' on the vote; named in the incoming Illinois class"
 }
 ]
 }
