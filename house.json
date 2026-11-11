@@ -439,8 +439,8 @@
 "status": "Current",
 "years": 18,
 "weight": 4.52,
-"score": 0,
-"basis": "No on-record statement found"
+"score": 3,
+"basis": "Nov 2026 (WWLP/Nexstar): said he plans to support Jeffries for speaker, citing unity on costs"
 },
 {
 "name": "Judy Chu",
@@ -2115,6 +2115,15 @@
 "weight": 1.0,
 "score": -1,
 "basis": "Nov 9 (Chicago Sun-Times): uncommitted; said she will be 'united with the progressive caucus' on the vote; named in the incoming Illinois class"
+},
+{
+"name": "Zack Mullock",
+"state": "NJ",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 3,
+"basis": "Nov 11 (Axios): said he would join the support for Jeffries; Axios identifies him as a NJ-2 member-elect"
 }
 ]
 }
