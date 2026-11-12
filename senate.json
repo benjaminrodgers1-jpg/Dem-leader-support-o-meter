@@ -6,7 +6,7 @@
 "subtitle": "Senate Democratic caucus",
 "people": "current and incoming senators",
 "person_col": "Senator",
-"through": "Nov 11, 2026",
+"through": "Nov 12, 2026",
 "note": "",
 "groups": [
 {
@@ -552,6 +552,15 @@
 "weight": 1.0,
 "score": -5,
 "basis": "'I will not support Chuck Schumer'; spokesperson reaffirmed Nov 4"
+},
+{
+"name": "Scott Colom",
+"state": "MS",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -1,
+"basis": "Nov 11 (Magnolia Tribune): race called for him; has not committed on leader, having said it is 'not a good thing' both party leaders live in the same borough"
 }
 ]
 }
