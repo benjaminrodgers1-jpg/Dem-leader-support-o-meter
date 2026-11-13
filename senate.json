@@ -289,8 +289,8 @@
 "status": "Returning",
 "years": 14,
 "weight": 3.52,
-"score": 2,
-"basis": "Nov 12 (AP): praised Schumer and said he saw no reason to change leadership; no explicit pledge"
+"score": 4,
+"basis": "Nov 12 (ABC News): issued a statement backing Schumer for majority leader, crediting him with the election wins"
 },
 {
 "name": "Tim Kaine",
@@ -361,8 +361,8 @@
 "status": "Returning",
 "years": 10,
 "weight": 2.8,
-"score": 0,
-"basis": "No on-record statement found"
+"score": 4,
+"basis": "Nov 12 (ABC News/CBS News): said she is proud to support Schumer for majority leader, crediting his work winning the majority"
 },
 {
 "name": "Lisa Blunt Rochester",
@@ -515,7 +515,7 @@
 "years": 0,
 "weight": 1.0,
 "score": -4,
-"basis": "'It is time for new leadership' (repeated Nov 4); Nov 9 said not ready to make commitments"
+"basis": "Nov 13 (The Hill): endorsed Van Hollen for leader over Schumer"
 },
 {
 "name": "Abdul El-Sayed",
