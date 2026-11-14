@@ -6,7 +6,7 @@
 "subtitle": "Senate Democratic caucus",
 "people": "current and incoming senators",
 "person_col": "Senator",
-"through": "Nov 13, 2026",
+"through": "Nov 14, 2026",
 "note": "",
 "groups": [
 {
@@ -217,8 +217,8 @@
 "status": "Returning",
 "years": 18,
 "weight": 4.24,
-"score": 0,
-"basis": "No on-record statement found"
+"score": -4,
+"basis": "Nov 13 (The Hill): endorsed Van Hollen for majority leader over Schumer"
 },
 {
 "name": "Michael Bennet",
@@ -280,8 +280,8 @@
 "status": "Returning",
 "years": 14,
 "weight": 3.52,
-"score": 1,
-"basis": "Praised Schumer's record when accepting his whip endorsement; no explicit leader statement found"
+"score": 4,
+"basis": "Nov 9 (Punchbowl): endorsed Schumer and said he will vote for him, crediting him with retaking the majority"
 },
 {
 "name": "Angus King",
