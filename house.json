@@ -6,7 +6,7 @@
 "subtitle": "House Democratic caucus",
 "people": "current House Democrats",
 "person_col": "Member",
-"through": "Nov 13, 2026",
+"through": "Nov 14, 2026",
 "note": "",
 "groups": [
 {
@@ -2151,6 +2151,15 @@
 "weight": 1.0,
 "score": -1,
 "basis": "Nov 2026 (CBS News): as Rep.-elect, declined to say whether Jeffries has his backing; Axios lists him among holdouts"
+},
+{
+"name": "Dan Koh",
+"state": "MA",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": 3,
+"basis": "Nov 13 (Axios): as Rep.-elect, said he is voting for Jeffries for speaker despite frustration over a floor vote"
 }
 ]
 }
