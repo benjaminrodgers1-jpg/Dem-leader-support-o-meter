@@ -6,7 +6,7 @@
 "subtitle": "House Democratic caucus",
 "people": "current House Democrats",
 "person_col": "Member",
-"through": "Nov 14, 2026",
+"through": "Nov 15, 2026",
 "note": "",
 "groups": [
 {
@@ -259,8 +259,8 @@
 "status": "Current",
 "years": 26,
 "weight": 6.09,
-"score": 0,
-"basis": "No on-record statement found"
+"score": 4,
+"basis": "Nov 13 (Everett Post; House office release): endorsed Jeffries for speaker, saying he has 'earned my confidence'"
 },
 {
 "name": "Betty McCollum",
