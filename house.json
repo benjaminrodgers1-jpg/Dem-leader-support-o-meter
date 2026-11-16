@@ -6,7 +6,7 @@
 "subtitle": "House Democratic caucus",
 "people": "current House Democrats",
 "person_col": "Member",
-"through": "Nov 15, 2026",
+"through": "Nov 16, 2026",
 "note": "",
 "groups": [
 {
@@ -898,8 +898,8 @@
 "status": "Current",
 "years": 10,
 "weight": 2.96,
-"score": 2,
-"basis": "Nov 5 (KUOW): called him the sole candidate and said Democrats should help him succeed; no explicit vote pledge"
+"score": -1,
+"basis": "Nov 2026 (Talking Points Memo): asked whether she backs Jeffries, said 'there's always a negotiation' and would not commit, seeking a Medicare for All markup"
 },
 {
 "name": "Steven Horsford",
