@@ -7,7 +7,7 @@
 "people": "current House Democrats",
 "person_col": "Member",
 "through": "Nov 18, 2026",
-"note": "",
+"note": "Jeffries was nominated for speaker by the caucus on Nov 18, 251-11; the floor vote is Jan. 3.",
 "groups": [
 {
 "label": "Current House Democrats",
@@ -1969,8 +1969,8 @@
 "status": "Incoming",
 "years": 0,
 "weight": 1.0,
-"score": -3,
-"basis": "Said she won't back a leader who takes corporate PAC money (Axios, Aug); Nov 9 said it is 'about the agenda' and stayed uncommitted"
+"score": -4,
+"basis": "Nov 18 (NPR): joined a joint statement of members-elect saying their caucus vote on Jeffries' speaker nomination was no, citing unfinished talks on priorities"
 },
 {
 "name": "Claire Valdez",
@@ -1978,8 +1978,8 @@
 "status": "Incoming",
 "years": 0,
 "weight": 1.0,
-"score": -1,
-"basis": "Nov 9: 'so far uncommitted'; expects the party to unify"
+"score": -4,
+"basis": "Nov 18 (NPR): joined a joint statement of members-elect saying their caucus vote on Jeffries' speaker nomination was no, citing unfinished talks on priorities"
 },
 {
 "name": "Darializa Avila Chevalier",
@@ -1987,8 +1987,8 @@
 "status": "Incoming",
 "years": 0,
 "weight": 1.0,
-"score": -1,
-"basis": "Nov 9: 'I haven't come to a decision yet'; called her talk with Jeffries positive"
+"score": -4,
+"basis": "Nov 18 (NPR): joined a joint statement of members-elect saying their caucus vote on Jeffries' speaker nomination was no, citing unfinished talks on priorities"
 },
 {
 "name": "Adam Hamawy",
@@ -1996,8 +1996,8 @@
 "status": "Incoming",
 "years": 0,
 "weight": 1.0,
-"score": -1,
-"basis": "Nov 9: not committed, keeping 'that option open'"
+"score": -4,
+"basis": "Nov 18 (NPR): joined a joint statement of members-elect saying their caucus vote on Jeffries' speaker nomination was no, citing unfinished talks on priorities"
 },
 {
 "name": "Katy Padilla Stout",
@@ -2149,8 +2149,8 @@
 "status": "Incoming",
 "years": 0,
 "weight": 1.0,
-"score": -1,
-"basis": "Nov 2026 (CBS News): as Rep.-elect, declined to say whether Jeffries has his backing; Axios lists him among holdouts"
+"score": -4,
+"basis": "Nov 18 (NPR): joined a joint statement of members-elect saying their caucus vote on Jeffries' speaker nomination was no, citing unfinished talks on priorities"
 },
 {
 "name": "Dan Koh",
@@ -2169,6 +2169,24 @@
 "weight": 1.0,
 "score": -1,
 "basis": "Nov 17 (AP): Rep.-elect said he will back whoever can best serve his Central Valley district, without committing to Jeffries; Axios identifies him as a member-elect"
+},
+{
+"name": "Donavan McKinney",
+"state": "MI",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -4,
+"basis": "Nov 18 (NPR): joined a joint statement of members-elect saying their caucus vote on Jeffries' speaker nomination was no, citing unfinished talks on priorities; NPR identifies him as a Rep.-elect"
+},
+{
+"name": "Frederick Haynes",
+"state": "TX",
+"status": "Incoming",
+"years": 0,
+"weight": 1.0,
+"score": -4,
+"basis": "Nov 18 (NPR): signed the members-elect joint statement against Jeffries' nomination; spokesperson said he missed the vote ill but intended to vote no; NPR identifies him as a Rep.-elect"
 }
 ]
 }
