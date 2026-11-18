@@ -6,7 +6,7 @@
 "subtitle": "Senate Democratic caucus",
 "people": "current and incoming senators",
 "person_col": "Senator",
-"through": "Nov 17, 2026",
+"through": "Nov 18, 2026",
 "note": "",
 "groups": [
 {
@@ -262,8 +262,8 @@
 "status": "Returning",
 "years": 16,
 "weight": 3.88,
-"score": 0,
-"basis": "No on-record statement found"
+"score": -1,
+"basis": "Nov 2026 (Washington Sun; Newsweek): has not backed either candidate, calling Van Hollen's odds 'remote' while asking for a constructive caucus conversation"
 },
 {
 "name": "Richard Blumenthal",
@@ -388,8 +388,8 @@
 "status": "Returning",
 "years": 8,
 "weight": 2.44,
-"score": 0,
-"basis": "No on-record statement found"
+"score": -1,
+"basis": "Nov 2026 (Newsweek): declined to pick a side when asked by MS NOW, saying caucus priorities matter more than one person"
 },
 {
 "name": "Elissa Slotkin",
@@ -505,8 +505,8 @@
 "status": "Incoming",
 "years": 0,
 "weight": 1.0,
-"score": -4,
-"basis": "On record that she won't support him; reaffirmed need for new leadership after the election"
+"score": -2,
+"basis": "Nov 17 (Post and Courier; SC Daily Gazette): after calling for a 'new generation' of leadership, said she is undecided between Schumer and Van Hollen"
 },
 {
 "name": "Peggy Flanagan",
