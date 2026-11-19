@@ -6,7 +6,7 @@
 "subtitle": "House Democratic caucus",
 "people": "current House Democrats",
 "person_col": "Member",
-"through": "Nov 18, 2026",
+"through": "Nov 19, 2026",
 "note": "Jeffries was nominated for speaker by the caucus on Nov 18, 251-11; the floor vote is Jan. 3.",
 "groups": [
 {
@@ -70,8 +70,8 @@
 "status": "Current",
 "years": 40,
 "weight": 8.83,
-"score": 0,
-"basis": "No on-record statement found"
+"score": 2,
+"basis": "Nov 18 (CNN): congratulated Speaker-designate Jeffries and downplayed the 11 caucus votes against him; no explicit vote pledge"
 },
 {
 "name": "Richard E. Neal",
@@ -115,8 +115,8 @@
 "status": "Current",
 "years": 34,
 "weight": 7.65,
-"score": 0,
-"basis": "No on-record statement found"
+"score": 1,
+"basis": "Nov 18 (Reuters): called the caucus nomination of Jeffries 'very historic'"
 },
 {
 "name": "Jerrold Nadler",
@@ -934,8 +934,8 @@
 "status": "Current",
 "years": 8,
 "weight": 2.57,
-"score": 0,
-"basis": "No on-record statement found"
+"score": 2,
+"basis": "Nov 18 (Reuters): said Jeffries is 'going to be a great speaker'; no explicit vote pledge"
 },
 {
 "name": "Mary Gay Scanlon",
