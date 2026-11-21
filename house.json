@@ -6,7 +6,7 @@
 "subtitle": "House Democratic caucus",
 "people": "current House Democrats",
 "person_col": "Member",
-"through": "Nov 20, 2026",
+"through": "Nov 21, 2026",
 "note": "Jeffries was nominated for speaker by the caucus on Nov 18, 251-11; the floor vote is Jan. 3.",
 "groups": [
 {
@@ -1897,8 +1897,8 @@
 "status": "Current",
 "years": 2,
 "weight": 1.39,
-"score": 0,
-"basis": "No on-record statement found"
+"score": 3,
+"basis": "Nov 18 (AP, via PBS): said she is voting for Jeffries for speaker after constituents raised leadership questions at town halls"
 },
 {
 "name": "James R. Walkinshaw",
