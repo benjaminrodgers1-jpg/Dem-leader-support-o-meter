@@ -6,7 +6,7 @@
 "subtitle": "Senate Democratic caucus",
 "people": "current and incoming senators",
 "person_col": "Senator",
-"through": "Nov 25, 2026",
+"through": "Nov 26, 2026",
 "note": "",
 "groups": [
 {
@@ -199,8 +199,8 @@
 "status": "Returning",
 "years": 18,
 "weight": 4.24,
-"score": -1,
-"basis": "Nov 10 (WSET): praised Schumer's fundraising and recruiting but did not commit to backing him"
+"score": 4,
+"basis": "Nov 25 (Washington Post): endorsed Schumer, saying he has 'earned my vote' after working to secure the majority"
 },
 {
 "name": "Jeanne Shaheen",
