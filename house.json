@@ -6,7 +6,7 @@
 "subtitle": "House Democratic caucus",
 "people": "current House Democrats",
 "person_col": "Member",
-"through": "Nov 22, 2026",
+"through": "Nov 27, 2026",
 "note": "Jeffries was nominated for speaker by the caucus on Nov 18, 251-11; the floor vote is Jan. 3.",
 "groups": [
 {
@@ -313,8 +313,8 @@
 "status": "Current",
 "years": 22,
 "weight": 5.3,
-"score": 0,
-"basis": "No on-record statement found"
+"score": 1,
+"basis": "Nov 19 (Axios): dismissed holdouts against Jeffries, saying they would not hold him 'hostage' and the matter was over"
 },
 {
 "name": "Al Green",
